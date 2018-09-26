@@ -1,10 +1,10 @@
 # HotCount
-Simple OSX application to count the number of pixel that are 'hot' in an image
+Simple OSX application to count the number of pixel that are 'hot' in an image.
 This is usefull when assessing the long exposure capability of a camera sensor
 # Usage
 1. Launch the application
 2. Drag an image file to the application
-3. HotCount will count the number of pixels with colour valuse above threshold
+3. HotCount will count the number of pixels with colour values above threshold
 
 HotCount can work with any image format that your Mac supports including RAW files
 

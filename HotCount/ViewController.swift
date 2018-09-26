@@ -27,6 +27,8 @@ class ViewController: NSViewController{
     @IBOutlet weak var apertureText: NSTextField!
     @IBOutlet weak var thresholdKnob: NSSlider!
     @IBOutlet weak var thresholdText: NSTextField!
+    @IBOutlet weak var temperatureText: NSTextField!
+    @IBOutlet weak var batteryText: NSTextField!
     
     var pixels : Float = 0
     var hotpixels : Float = 0
@@ -127,6 +129,21 @@ class ViewController: NSViewController{
         thresholdText.stringValue = formatter.string(from: NSNumber (value:self.threshold))!
     }
     
+    func convertToDictionary(text: String) -> NSDictionary? {
+        var dict = ["empty": "String"]
+        let lines = text.components(separatedBy: "\n")
+        for line in lines {
+            let trimmed = line.replacingOccurrences(of: " ", with: "")
+            if trimmed.count > 2 {
+                print(trimmed)
+                let items = trimmed.components(separatedBy: ":")
+                dict[items[0]] = items[1]
+            }
+        }
+        return dict as NSDictionary
+    }
+    
+    
 }
 
 
@@ -146,6 +163,7 @@ extension ViewController: DestinationViewDelegate {
                 // get the exif data
                 if let imageSource = CGImageSourceCreateWithURL(url as CFURL, nil) {
                     let dict : NSDictionary = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil)!
+                    
                     if let tiffDict = dict.object(forKey: "{TIFF}") as? NSDictionary {
                         if let cameraMake = tiffDict.value(forKey: "Make") as? String { makeText.stringValue = cameraMake }
                         if let cameraModel = tiffDict.value(forKey: "Model") as? String { modelText.stringValue = cameraModel }
@@ -172,6 +190,31 @@ extension ViewController: DestinationViewDelegate {
                             sutterText.stringValue = shutterString!
                         }
                     }
+                    // check if exiftool is available and get the temperatures if it is
+                    let process = Process()
+                    let pipe = Pipe()
+                    process.executableURL = URL(fileURLWithPath:"/usr/local/bin/exiftool")
+                    process.arguments = ["-*temperature*", "/Users/pbarnard/DropBoxMac/Dropbox/Shared/dpreview/LENR/_DSC4684.ARW"]
+                    process.terminationHandler = { (process) in
+                        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+                        if let string = String(data: data, encoding: String.Encoding.utf8) {
+                            // we have an output from exiftool
+                            let temperatures : NSDictionary? = self.convertToDictionary(text:string)! as NSDictionary
+                            DispatchQueue.main.async {
+                                self.temperatureText.stringValue = temperatures?.value(forKey: "CameraTemperature") as! String
+                                self.batteryText.stringValue = temperatures?.value(forKey: "BatteryTemperature") as! String
+                            }
+                         }
+                    }
+                    process.standardOutput = pipe
+                   do {
+                        try process.run()
+                    } catch {
+                        print("Error launching exiftool")
+                        DispatchQueue.main.async {
+                            self.temperatureText.stringValue = "Requires exiftool"
+                        }
+                    }
                 }
                 
                 DispatchQueue.main.async {
@@ -185,6 +228,8 @@ extension ViewController: DestinationViewDelegate {
             }
         }
     }
+    
+
     
 }
 

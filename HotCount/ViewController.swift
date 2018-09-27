@@ -28,6 +28,7 @@ class ViewController: NSViewController{
     @IBOutlet weak var thresholdKnob: NSSlider!
     @IBOutlet weak var thresholdText: NSTextField!
     @IBOutlet weak var temperatureText: NSTextField!
+    @IBOutlet weak var additionalInfo: NSTextField!
     
     var pixels : Float = 0
     var hotpixels : Float = 0
@@ -134,7 +135,7 @@ class ViewController: NSViewController{
         for line in lines {
             let trimmed = line.replacingOccurrences(of: " ", with: "")
             if trimmed.count > 2 {
-                print(trimmed)
+                //print(trimmed)
                 let items = trimmed.components(separatedBy: ":")
                 dict[items[0]] = items[1]
             }
@@ -206,7 +207,7 @@ extension ViewController: DestinationViewDelegate {
                                     tempString.append(contentsOf: "amb:")
                                     tempString.append(contentsOf: ambientTemp)
                                     tempString.append(contentsOf: "  ")
-                               }
+                                }
                                 if let cameraTemp : String = temperatures?.value(forKey: "CameraTemperature") as? String {
                                     tempString.append(contentsOf: "cam:")
                                     tempString.append(contentsOf: cameraTemp)
@@ -225,7 +226,7 @@ extension ViewController: DestinationViewDelegate {
                         }
                     }
                     process.standardOutput = pipe
-                   do {
+                    do {
                         try process.run()
                     } catch {
                         print("Error launching exiftool")
@@ -233,6 +234,39 @@ extension ViewController: DestinationViewDelegate {
                             self.temperatureText.stringValue = "Requires exiftool"
                         }
                     }
+                    // now look for noise reduction info
+                    let LENRprocess = Process()
+                    let LENRpipe = Pipe()
+                    LENRprocess.executableURL = URL(fileURLWithPath:"/usr/local/bin/exiftool")
+                    LENRprocess.arguments = ["-*LongExposureNoiseReduction*", file]
+                    LENRprocess.terminationHandler = { (LENRprocess) in
+                        let data = LENRpipe.fileHandleForReading.readDataToEndOfFile()
+                        if let string = String(data: data, encoding: String.Encoding.utf8) {
+                            // we have an output from exiftool
+                            let results : NSDictionary? = self.convertToDictionary(text:string)! as NSDictionary
+                            DispatchQueue.main.async {
+                                if let LENR : String = results?.value(forKey: "LongExposureNoiseReduction") as? String {
+                                    if LENR == "Off" || LENR == "OFF" || LENR == "off" {
+                                        self.additionalInfo.stringValue = "LENR OFF"
+                                    } else {
+                                        self.additionalInfo.stringValue = "LENR ON"
+                                    }
+                                } else {
+                                    self.additionalInfo.stringValue = ""
+                                }
+                            }
+                        }
+                    }
+                    LENRprocess.standardOutput = LENRpipe
+                    do {
+                        try LENRprocess.run()
+                    } catch {
+                        print("Error launching exiftool")
+                    }
+                    
+                    
+                    
+                    
                 }
                 
                 DispatchQueue.main.async {

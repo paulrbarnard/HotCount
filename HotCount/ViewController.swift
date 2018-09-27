@@ -28,7 +28,6 @@ class ViewController: NSViewController{
     @IBOutlet weak var thresholdKnob: NSSlider!
     @IBOutlet weak var thresholdText: NSTextField!
     @IBOutlet weak var temperatureText: NSTextField!
-    @IBOutlet weak var batteryText: NSTextField!
     
     var pixels : Float = 0
     var hotpixels : Float = 0
@@ -202,10 +201,28 @@ extension ViewController: DestinationViewDelegate {
                             // we have an output from exiftool
                             let temperatures : NSDictionary? = self.convertToDictionary(text:string)! as NSDictionary
                             DispatchQueue.main.async {
-                                self.temperatureText.stringValue = temperatures?.value(forKey: "CameraTemperature") as! String
-                                self.batteryText.stringValue = temperatures?.value(forKey: "BatteryTemperature") as! String
+                                var tempString : String = ""
+                                if let ambientTemp : String = temperatures?.value(forKey: "AmbientTemperature") as? String {
+                                    tempString.append(contentsOf: "amb:")
+                                    tempString.append(contentsOf: ambientTemp)
+                                    tempString.append(contentsOf: "  ")
+                               }
+                                if let cameraTemp : String = temperatures?.value(forKey: "CameraTemperature") as? String {
+                                    tempString.append(contentsOf: "cam:")
+                                    tempString.append(contentsOf: cameraTemp)
+                                    tempString.append(contentsOf: "  ")
+                                }
+                                if let batteryTemp : String = temperatures?.value(forKey: "BatteryTemperature") as? String {
+                                    tempString.append(contentsOf: "bat:")
+                                    tempString.append(contentsOf: batteryTemp)
+                                }
+                                if tempString.count > 1 {
+                                    self.temperatureText.stringValue = tempString
+                                } else {
+                                    self.temperatureText.stringValue = "No data"
+                                }
                             }
-                         }
+                        }
                     }
                     process.standardOutput = pipe
                    do {

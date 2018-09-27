@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="HotCount" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="471" height="399"/>
+                        <rect key="frame" x="0.0" y="0.0" width="525" height="429"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="575-am-BXI">
-                                <rect key="frame" x="18" y="362" width="82" height="17"/>
+                                <rect key="frame" x="18" y="392" width="82" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Image size:" id="tf5-Se-FS6">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -719,7 +719,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="XIA-eW-rLP">
-                                <rect key="frame" x="106" y="362" width="13" height="17"/>
+                                <rect key="frame" x="106" y="392" width="13" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="0" id="jxa-6G-s7b">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -727,7 +727,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="fMm-lg-Ez2">
-                                <rect key="frame" x="125" y="362" width="11" height="17"/>
+                                <rect key="frame" x="125" y="392" width="11" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="x" id="R1Y-wN-ath">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -735,7 +735,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="5Nj-xh-gKX">
-                                <rect key="frame" x="142" y="362" width="13" height="17"/>
+                                <rect key="frame" x="142" y="392" width="13" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="0" id="3kw-Yd-7jJ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -743,7 +743,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="deF-Pg-jfo">
-                                <rect key="frame" x="18" y="337" width="84" height="17"/>
+                                <rect key="frame" x="18" y="367" width="84" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Hot Pixels:" id="589-PB-WkR">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -751,7 +751,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-9I-JhR">
-                                <rect key="frame" x="106" y="337" width="13" height="17"/>
+                                <rect key="frame" x="106" y="367" width="13" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="0" id="4Mg-4N-ykX">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -759,7 +759,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="SBl-yZ-Jpm">
-                                <rect key="frame" x="18" y="312" width="84" height="17"/>
+                                <rect key="frame" x="18" y="342" width="84" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Percentage:" id="m8R-hZ-4EM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -767,7 +767,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tig-ZP-anw">
-                                <rect key="frame" x="106" y="312" width="23" height="17"/>
+                                <rect key="frame" x="106" y="342" width="23" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="0%" id="oem-r8-HHh">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -775,7 +775,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vLT-Vm-TBv">
-                                <rect key="frame" x="18" y="20" width="435" height="18"/>
+                                <rect key="frame" x="18" y="20" width="489" height="18"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="wRv-W8-3cA">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -783,7 +783,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Fys-BS-AuH">
-                                <rect key="frame" x="234" y="362" width="85" height="17"/>
+                                <rect key="frame" x="261" y="392" width="85" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="H2s-89-dv4">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -791,7 +791,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-aG-Jeh">
-                                <rect key="frame" x="323" y="362" width="4" height="17"/>
+                                <rect key="frame" x="350" y="392" width="4" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="3vJ-Ej-MGw">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -799,7 +799,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yuc-R0-EJ7">
-                                <rect key="frame" x="234" y="337" width="85" height="17"/>
+                                <rect key="frame" x="261" y="367" width="85" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Version:" id="frm-h6-NEC">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -807,7 +807,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4gb-e2-Oml">
-                                <rect key="frame" x="323" y="337" width="130" height="17"/>
+                                <rect key="frame" x="350" y="367" width="157" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="4mO-dk-fbf">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -815,7 +815,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="GIe-Vp-3Xm">
-                                <rect key="frame" x="234" y="312" width="85" height="17"/>
+                                <rect key="frame" x="261" y="342" width="85" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="ISO:" id="9Oy-zD-ZiL">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -823,7 +823,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qlg-ep-YmF">
-                                <rect key="frame" x="323" y="312" width="130" height="17"/>
+                                <rect key="frame" x="350" y="342" width="157" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="b4I-sP-rQb">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -831,7 +831,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="QH9-hz-z3l">
-                                <rect key="frame" x="234" y="287" width="85" height="17"/>
+                                <rect key="frame" x="261" y="317" width="85" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Shutter:" id="yta-Xh-6mA">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -839,7 +839,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AeY-VS-dTU">
-                                <rect key="frame" x="323" y="287" width="130" height="17"/>
+                                <rect key="frame" x="350" y="317" width="157" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="1wP-zD-35H">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -847,7 +847,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="DbS-J1-6jz">
-                                <rect key="frame" x="234" y="262" width="85" height="17"/>
+                                <rect key="frame" x="261" y="292" width="85" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Aperture:" id="8Qq-0f-cPG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -855,7 +855,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mfr-3S-XkQ">
-                                <rect key="frame" x="323" y="262" width="130" height="17"/>
+                                <rect key="frame" x="350" y="292" width="157" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="OdY-Te-Q73">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -863,15 +863,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1au-vt-J9Z">
-                                <rect key="frame" x="234" y="237" width="85" height="17"/>
+                                <rect key="frame" x="261" y="267" width="85" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Temperature:" id="tCn-Wk-07h">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TVc-7s-7ca">
-                                <rect key="frame" x="323" y="237" width="62" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="TVc-7s-7ca">
+                                <rect key="frame" x="350" y="267" width="157" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="6lT-uO-fvw">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -879,7 +879,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-gB-2pv">
-                                <rect key="frame" x="18" y="212" width="84" height="17"/>
+                                <rect key="frame" x="18" y="242" width="84" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Image Name:" id="wgG-Dg-idZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -887,7 +887,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-g0-gNW">
-                                <rect key="frame" x="106" y="212" width="347" height="17"/>
+                                <rect key="frame" x="106" y="242" width="401" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="gGp-Hy-eAN">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -895,7 +895,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-iZ-IYx">
-                                <rect key="frame" x="18" y="117" width="435" height="17"/>
+                                <rect key="frame" x="18" y="132" width="489" height="17"/>
                                 <textFieldCell key="cell" alignment="center" title="Drop image here" id="iPy-Rb-QnS">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -903,28 +903,28 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YzY-2r-gmr">
-                                <rect key="frame" x="17" y="43" width="437" height="164"/>
+                                <rect key="frame" x="17" y="43" width="491" height="194"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="3JX-oX-DQN"/>
                             </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="2Jc-1l-aVw" customClass="DestinationView" customModule="HotCount" customModuleProvider="target">
-                                <rect key="frame" x="20" y="46" width="431" height="158"/>
+                                <rect key="frame" x="20" y="46" width="485" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="300" id="7u7-zk-GCD"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="150" id="erY-fK-7ef"/>
                                 </constraints>
                             </customView>
                             <progressIndicator wantsLayer="YES" verticalCompressionResistancePriority="751" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="uEa-BD-Yb3">
-                                <rect key="frame" x="20" y="19" width="431" height="20"/>
+                                <rect key="frame" x="20" y="19" width="485" height="20"/>
                             </progressIndicator>
                             <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nEd-1k-eqK">
-                                <rect key="frame" x="18" y="277" width="28" height="30"/>
+                                <rect key="frame" x="18" y="307" width="28" height="30"/>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="10" doubleValue="5" sliderType="circular" id="MgB-M9-SdS"/>
                                 <connections>
                                     <action selector="thresholdChanged:" target="XfG-lQ-9wD" id="Hm5-kv-Xyq"/>
                                 </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HDu-m7-L2Y">
-                                <rect key="frame" x="50" y="284" width="37" height="17"/>
+                                <rect key="frame" x="50" y="314" width="37" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="alT-TV-pFj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -932,16 +932,8 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="er1-8V-TAx">
-                                <rect key="frame" x="91" y="284" width="117" height="17"/>
+                                <rect key="frame" x="91" y="314" width="117" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="intensity threshold" id="7cK-iq-fwI">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-Dk-p2m">
-                                <rect key="frame" x="391" y="237" width="62" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" id="iud-gx-w7y">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -966,10 +958,8 @@
                             <constraint firstItem="TVc-7s-7ca" firstAttribute="leading" secondItem="1au-vt-J9Z" secondAttribute="trailing" constant="8" symbolic="YES" id="G3D-06-wFf"/>
                             <constraint firstAttribute="trailing" secondItem="2Jc-1l-aVw" secondAttribute="trailing" constant="20" id="I2m-NM-vvt"/>
                             <constraint firstItem="fiQ-g0-gNW" firstAttribute="centerY" secondItem="kh8-gB-2pv" secondAttribute="centerY" id="IU0-jk-O0j"/>
-                            <constraint firstItem="vTy-Dk-p2m" firstAttribute="width" secondItem="TVc-7s-7ca" secondAttribute="width" id="KAg-h3-5cp"/>
                             <constraint firstItem="DbS-J1-6jz" firstAttribute="top" secondItem="QH9-hz-z3l" secondAttribute="bottom" constant="8" symbolic="YES" id="Kca-80-6OS"/>
                             <constraint firstAttribute="trailing" secondItem="bd3-iZ-IYx" secondAttribute="trailing" constant="20" id="Kxq-Xj-XOB"/>
-                            <constraint firstItem="vTy-Dk-p2m" firstAttribute="centerY" secondItem="TVc-7s-7ca" secondAttribute="centerY" id="LTC-PJ-d58"/>
                             <constraint firstItem="uEa-BD-Yb3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="MTX-ij-XS7"/>
                             <constraint firstItem="YzY-2r-gmr" firstAttribute="height" secondItem="2Jc-1l-aVw" secondAttribute="height" id="NPO-uu-I8o"/>
                             <constraint firstAttribute="trailing" secondItem="Mfr-3S-XkQ" secondAttribute="trailing" constant="20" symbolic="YES" id="NRZ-mz-VMH"/>
@@ -998,6 +988,7 @@
                             <constraint firstItem="QH9-hz-z3l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HDu-m7-L2Y" secondAttribute="trailing" constant="8" symbolic="YES" id="bmF-jM-A55"/>
                             <constraint firstItem="XIA-eW-rLP" firstAttribute="centerY" secondItem="575-am-BXI" secondAttribute="centerY" id="bmh-v3-AkQ"/>
                             <constraint firstItem="SBl-yZ-Jpm" firstAttribute="leading" secondItem="deF-Pg-jfo" secondAttribute="leading" id="byu-02-Pyn"/>
+                            <constraint firstAttribute="trailing" secondItem="TVc-7s-7ca" secondAttribute="trailing" constant="20" symbolic="YES" id="cEq-A7-aDN"/>
                             <constraint firstItem="1au-vt-J9Z" firstAttribute="leading" secondItem="DbS-J1-6jz" secondAttribute="leading" id="cWJ-D6-fxS"/>
                             <constraint firstItem="fMm-lg-Ez2" firstAttribute="centerY" secondItem="XIA-eW-rLP" secondAttribute="centerY" id="d5K-CN-XmK"/>
                             <constraint firstItem="HDu-m7-L2Y" firstAttribute="centerY" secondItem="nEd-1k-eqK" secondAttribute="centerY" id="dhS-3N-aly"/>
@@ -1037,18 +1028,15 @@
                             <constraint firstItem="575-am-BXI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="wmV-ed-vTT"/>
                             <constraint firstItem="GIe-Vp-3Xm" firstAttribute="centerY" secondItem="Tig-ZP-anw" secondAttribute="centerY" id="wve-vD-00W"/>
                             <constraint firstItem="QH9-hz-z3l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="er1-8V-TAx" secondAttribute="trailing" constant="8" symbolic="YES" id="xbC-Yq-wp8"/>
-                            <constraint firstItem="vTy-Dk-p2m" firstAttribute="leading" secondItem="TVc-7s-7ca" secondAttribute="trailing" constant="10" id="y9Y-mU-nI1"/>
                             <constraint firstItem="fMm-lg-Ez2" firstAttribute="leading" secondItem="XIA-eW-rLP" secondAttribute="trailing" constant="10" id="z7B-kU-ovA"/>
                             <constraint firstItem="XIA-eW-rLP" firstAttribute="leading" secondItem="575-am-BXI" secondAttribute="trailing" constant="10" id="zBH-DM-pND"/>
                             <constraint firstItem="mv3-aG-Jeh" firstAttribute="leading" secondItem="Fys-BS-AuH" secondAttribute="trailing" constant="8" symbolic="YES" id="zDl-cP-wVW"/>
                             <constraint firstItem="AeY-VS-dTU" firstAttribute="leading" secondItem="qlg-ep-YmF" secondAttribute="leading" id="zNW-dP-dpK"/>
-                            <constraint firstAttribute="trailing" secondItem="vTy-Dk-p2m" secondAttribute="trailing" constant="20" symbolic="YES" id="zib-P1-BIC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ISOText" destination="qlg-ep-YmF" id="ciL-8m-UZ8"/>
                         <outlet property="apertureText" destination="Mfr-3S-XkQ" id="aU4-Kn-4DV"/>
-                        <outlet property="batteryText" destination="vTy-Dk-p2m" id="lZx-fC-BYz"/>
                         <outlet property="fileName" destination="fiQ-g0-gNW" id="fwS-rG-o4c"/>
                         <outlet property="hotCount" destination="Zhz-9I-JhR" id="cuA-xe-Mss"/>
                         <outlet property="hotPercentage" destination="Tig-ZP-anw" id="i1k-0i-M0D"/>
@@ -1069,7 +1057,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123.5" y="764.5"/>
+            <point key="canvasLocation" x="150.5" y="779.5"/>
         </scene>
     </scenes>
 </document>

@@ -193,8 +193,9 @@ extension ViewController: DestinationViewDelegate {
                     // check if exiftool is available and get the temperatures if it is
                     let process = Process()
                     let pipe = Pipe()
+                    let file = url.absoluteString.replacingOccurrences(of:"file:///", with: "/")
                     process.executableURL = URL(fileURLWithPath:"/usr/local/bin/exiftool")
-                    process.arguments = ["-*temperature*", "/Users/pbarnard/DropBoxMac/Dropbox/Shared/dpreview/LENR/_DSC4684.ARW"]
+                    process.arguments = ["-*temperature*", file]
                     process.terminationHandler = { (process) in
                         let data = pipe.fileHandleForReading.readDataToEndOfFile()
                         if let string = String(data: data, encoding: String.Encoding.utf8) {

@@ -35,16 +35,22 @@ class ViewController: NSViewController{
     var pixelsProcessed : Float = 0
     var pixelPercent : Float = 0
     var threshold : Float = 0.5
+    var clipString : String = ""
     
     var countTask : DispatchWorkItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        appDelegate.myViewController = self
+
         // Do any additional setup after loading the view.
         imageTarget.delegate = self
         thresholdText.floatValue = threshold
         thresholdKnob.floatValue = threshold * 10
+        progressText.stringValue = "Waiting"
+        clipString = "Waiting for Image"
    }
     
     override var representedObject: Any? {
@@ -100,6 +106,15 @@ class ViewController: NSViewController{
         DispatchQueue.main.async {
             self.progressText.stringValue = "Counting Complete"
             self.progress.doubleValue = 0
+            self.clipString = ""
+            self.clipString.append("HotCount results for \(self.fileName.stringValue)\n")
+            self.clipString.append("Camera:\(self.makeText.stringValue) \(self.modelText.stringValue) running SW Version:\(self.versionText.stringValue)\n")
+            self.clipString.append("ISO:\(self.ISOText.stringValue)  Shutter Speed:\(self.sutterText.stringValue)  Aperture:\(self.apertureText.stringValue)\n")
+            if self.additionalInfo.stringValue.count > 1 {
+                self.clipString.append("\(self.additionalInfo.stringValue)\n")
+            }
+            self.clipString.append("Temperature:\(self.temperatureText.stringValue)\n")
+            self.clipString.append("Hot Pixel Count:\(self.hotCount.stringValue)  Percentage:\(self.hotPercentage.stringValue) with threshold:\(self.thresholdText.stringValue)\n")
         }
         
     }
@@ -271,6 +286,7 @@ extension ViewController: DestinationViewDelegate {
                 
                 DispatchQueue.main.async {
                     self.progressText.stringValue = "Counting"
+                    self.clipString = "Counting in progress"
                 }
                 
                 countTask = DispatchWorkItem { self.countHotPixels(image: image) }
